@@ -1,3 +1,5 @@
+const bookFunctions = require("./books.js")
+
 function findAccountById(accounts, id) 
 {
   return accounts.find((account) => account.id === id)
@@ -37,7 +39,6 @@ function getBooksPossessedByAccount(account, books, authors)
   const embedAuthor = function(book)
   {
     //find author
-    const bookFunctions = require("./books.js")
     const author = bookFunctions.findAuthorById(authors, book.authorId)
 
     //add author information to the book

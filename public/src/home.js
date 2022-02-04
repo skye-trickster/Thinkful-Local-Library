@@ -1,7 +1,3 @@
-const acc = require("../data/accounts.js")
-const bks = require("../data/books.js")
-const auth = require("../data/authors")
-
 const bookFunctions = require("./books.js")
 
 function getTotalBooksCount(books) { return books.length; }
@@ -56,7 +52,6 @@ function getMostPopularAuthors(books, authors)
   return getMostPopularItems(books, getAuthor, getBookBorrows)
 }
 
-console.log(getMostPopularAuthors(bks, auth))
 
 module.exports = {
   getTotalBooksCount,
