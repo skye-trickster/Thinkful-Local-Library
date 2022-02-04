@@ -1,4 +1,4 @@
-const bookFunctions = require("./books.js")
+
 
 function getTotalBooksCount(books) { return books.length; }
 
@@ -44,7 +44,8 @@ function getMostPopularAuthors(books, authors)
 {
   const getAuthor = function(book)
   {
-    const {first, last} = bookFunctions.findAuthorById(authors, book.authorId).name
+    const findAuthorById = require("./books.js").findAuthorById
+    const {first, last} = findAuthorById(authors, book.authorId).name
     return `${first} ${last}`
   }
   const getBookBorrows = (book) => book.borrows.length

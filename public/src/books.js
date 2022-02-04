@@ -1,4 +1,4 @@
-const accountFunctions = require("./accounts.js")
+
 
 function findAuthorById(authors, id) 
 {
@@ -27,7 +27,8 @@ function getBorrowersForBook(book, accounts)
   const borrowList = []
   for(let instance in book.borrows)
   {
-    const account = accountFunctions.findAccountById(accounts, book.borrows[instance].id)
+    const findAccountById = require("./accounts.js").findAccountById
+    const account = findAccountById(accounts, book.borrows[instance].id)
 
     embedReturnStatus(account, book.borrows[instance].returned)
 
