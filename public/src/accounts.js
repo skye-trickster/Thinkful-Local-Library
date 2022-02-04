@@ -51,11 +51,6 @@ function getBooksPossessedByAccount(account, books, authors)
   return bookList
 }
 
-const acc = require("../data/accounts.js")
-const auth = require("../data/authors.js")
-const bks = require("../data/books.js")
-console.log(getBooksPossessedByAccount(acc[4], bks, auth))//.map((book) => book.author))
-
 module.exports = {
   findAccountById,
   sortAccountsByLastName,

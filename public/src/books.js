@@ -25,11 +25,11 @@ function getBorrowersForBook(book, accounts)
   const embedReturnStatus = (borrower, returnStatus) => borrower["returned"] = returnStatus
 
   const borrowList = []
-  for(let i in book.borrows)
+  for(let instance in book.borrows)
   {
-    const account = accountFunctions.findAccountById(accounts, book.borrows[i].id)
+    const account = accountFunctions.findAccountById(accounts, book.borrows[instance].id)
 
-    embedReturnStatus(account, book.borrows[i].returned)
+    embedReturnStatus(account, book.borrows[instance].returned)
 
     borrowList.push(account)
     
